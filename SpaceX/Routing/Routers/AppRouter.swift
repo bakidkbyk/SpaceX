@@ -5,15 +5,18 @@
 //  Created by Baki on 13.01.2025.
 //
 
-//import UIKit
-//
-//final class AppRouter: Router, AppRouter.Routes {
-//
-//    typealias Routes = WalkthroughRoute & HomeTabBarRoute
-//    
-//    static let shared = AppRouter()
-//    
-//    func startApp() {
-//
-//    }
-//}
+import UIKit
+
+protocol AppRouterRoutes: HomeRoute {
+    func startApp()
+    
+}
+
+final class AppRouter: Router, AppRouterRoutes  {
+
+    static let shared = AppRouter()
+    
+    func startApp() {
+        placeOnWindowHome()
+    }
+}
