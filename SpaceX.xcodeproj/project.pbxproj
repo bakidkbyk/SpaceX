@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2D3E380F2D35B6FB00A969BC /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 2D3E380E2D35B6FB00A969BC /* TinyConstraints */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2D99F2D92D3468F700FCB06E /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3E380F2D35B6FB00A969BC /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = SpaceX;
 			packageProductDependencies = (
+				2D3E380E2D35B6FB00A969BC /* TinyConstraints */,
 			);
 			productName = SpaceX;
 			productReference = 2D99F2D92D3468F700FCB06E /* SpaceX.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 2D99F2D02D3468F700FCB06E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2D3E380D2D35B6FB00A969BC /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D99F2DA2D3468F700FCB06E /* Products */;
 			projectDirPath = "";
@@ -333,6 +342,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D3E380D2D35B6FB00A969BC /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D3E380E2D35B6FB00A969BC /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D3E380D2D35B6FB00A969BC /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D99F2D12D3468F700FCB06E /* Project object */;
 }
