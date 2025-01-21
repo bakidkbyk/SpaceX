@@ -7,7 +7,9 @@
 
 import UIKit
 
-class BaseViewController<V: BaseViewModeProtocol>: UIViewController {
+class BaseViewController<V: BaseViewModelProtocol>: UIViewController, LoadingProtocol, ActivityIndicatorProtocol  {
+    
+    typealias LoadingProtocols = LoadingProtocol & ActivityIndicatorProtocol
     
     var viewModel: V
     
@@ -18,11 +20,29 @@ class BaseViewController<V: BaseViewModeProtocol>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        subscribeLoading()
+        subscribeActivityIndicator()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-        
+    
+    private func subscribeActivityIndicator() {
+        viewModel.showActivityIndicatorView = { [weak self] in
+            self?.showActivityIndicator()
+        }
+        viewModel.hideActivityIndicatorView = { [weak self] in
+            self?.hideActivityIndicator()
+        }
+    }
+    
+    private func subscribeLoading() {
+        viewModel.showLoading = { [weak self] in
+            self?.presentLoading()
+        }
+        viewModel.hideLoading = { [weak self] in
+            self?.dismissLoading()
+        }
+    }
 }

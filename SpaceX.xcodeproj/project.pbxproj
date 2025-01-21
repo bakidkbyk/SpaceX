@@ -7,8 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D3E380F2D35B6FB00A969BC /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 2D3E380E2D35B6FB00A969BC /* TinyConstraints */; };
+		2D74C1DF2D392654008DFFC9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2D74C1DE2D392654008DFFC9 /* Alamofire */; };
+		2D74C1E42D39265E008DFFC9 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 2D74C1E32D39265E008DFFC9 /* TinyConstraints */; };
+		2D74C1E72D392C97008DFFC9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2D74C1E62D392C97008DFFC9 /* Kingfisher */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2D74C0FC2D390B35008DFFC9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D99F2D92D3468F700FCB06E /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D3E380F2D35B6FB00A969BC /* TinyConstraints in Frameworks */,
+				2D74C1E72D392C97008DFFC9 /* Kingfisher in Frameworks */,
+				2D74C1DF2D392654008DFFC9 /* Alamofire in Frameworks */,
+				2D74C1E42D39265E008DFFC9 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +90,7 @@
 				2D99F2D52D3468F700FCB06E /* Sources */,
 				2D99F2D62D3468F700FCB06E /* Frameworks */,
 				2D99F2D72D3468F700FCB06E /* Resources */,
+				2D74C0FC2D390B35008DFFC9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -83,7 +101,9 @@
 			);
 			name = SpaceX;
 			packageProductDependencies = (
-				2D3E380E2D35B6FB00A969BC /* TinyConstraints */,
+				2D74C1DE2D392654008DFFC9 /* Alamofire */,
+				2D74C1E32D39265E008DFFC9 /* TinyConstraints */,
+				2D74C1E62D392C97008DFFC9 /* Kingfisher */,
 			);
 			productName = SpaceX;
 			productReference = 2D99F2D92D3468F700FCB06E /* SpaceX.app */;
@@ -114,7 +134,9 @@
 			mainGroup = 2D99F2D02D3468F700FCB06E;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				2D3E380D2D35B6FB00A969BC /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				2D74C1DD2D392654008DFFC9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2D74C1E22D39265E008DFFC9 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				2D74C1E52D392C97008DFFC9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D99F2DA2D3468F700FCB06E /* Products */;
@@ -161,6 +183,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,6 +211,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +368,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2D3E380D2D35B6FB00A969BC /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+		2D74C1DD2D392654008DFFC9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		2D74C1E22D39265E008DFFC9 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
 			requirement = {
@@ -352,13 +384,31 @@
 				minimumVersion = 4.0.2;
 			};
 		};
+		2D74C1E52D392C97008DFFC9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2D3E380E2D35B6FB00A969BC /* TinyConstraints */ = {
+		2D74C1DE2D392654008DFFC9 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2D3E380D2D35B6FB00A969BC /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			package = 2D74C1DD2D392654008DFFC9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2D74C1E32D39265E008DFFC9 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D74C1E22D39265E008DFFC9 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
 			productName = TinyConstraints;
+		};
+		2D74C1E62D392C97008DFFC9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D74C1E52D392C97008DFFC9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
