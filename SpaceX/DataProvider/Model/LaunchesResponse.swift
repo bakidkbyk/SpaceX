@@ -1,5 +1,5 @@
 //
-//  UpcomingResponse.swift
+//  LaunchesResponse.swift
 //  SpaceX
 //
 //  Created by Baki on 15.01.2025.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct UpcomingResponse: Decodable {
+public struct LaunchesResponse: Decodable {
     public let links: Links
     public let dateLocal: String
     public let upcoming: Bool

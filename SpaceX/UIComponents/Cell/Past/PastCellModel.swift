@@ -1,28 +1,23 @@
 //
-//  UpcomingCellModel.swift
+//  PastCellModel.swift
 //  SpaceX
 //
-//  Created by Baki on 15.01.2025.
+//  Created by Baki on 21.01.2025.
 //
 
 import Foundation
 
-public protocol UpcomingCellDataSource: AnyObject {
+public protocol PastCellDataSource: AnyObject {
     var imageUrl: String { get }
     var name: String { get }
     var date: String { get }
 }
 
-public protocol UpcomingCellEventSource: AnyObject {
-    
-}
+public protocol PastCellEventSource: AnyObject {}
 
-public protocol UpcomingCellProtocol: UpcomingCellDataSource, UpcomingCellEventSource {
-    
-}
+public protocol PastCellProtocol: PastCellDataSource, PastCellEventSource {}
 
-public final class UpcomingCellModel: UpcomingCellProtocol {
-    
+public final class PastCellModel: PastCellProtocol {
     public var imageUrl: String
     public var name: String
     public var date: String

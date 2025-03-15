@@ -66,6 +66,8 @@ extension HomeViewController {
         
         pageViewController.setViewControllers([subViewControllers[viewModel.selectedSegmentIndex]], direction: .forward, animated: true)
         segmentControl.selectedSegmentIndex = 0
+        
+        segmentControl.addTarget(self, action: #selector(segmentControlValueChanged), for: .valueChanged)
     }
     
     private func setLocalize(){
@@ -95,8 +97,14 @@ extension HomeViewController {
 // MARK: - Segmented Control Value Change
 extension HomeViewController {
 
-    private func segmentioControlDidChange() {
-
+    @objc
+    func segmentControlValueChanged(_ sender: UISegmentedControl) {
+        let selectedIndex = sender.selectedSegmentIndex
+        let direction: UIPageViewController.NavigationDirection = selectedIndex > viewModel.selectedSegmentIndex ? .forward : .reverse
+        
+        viewModel.selectedSegmentIndex = selectedIndex
+        
+        self.pageViewController.setViewControllers([subViewControllers[selectedIndex]], direction: direction, animated: true)
     }
  }
 
